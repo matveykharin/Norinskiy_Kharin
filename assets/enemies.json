@@ -1,0 +1,144 @@
+{
+  "enemies": [
+    {
+      "id": "enemy_nerd_russian",
+      "name": "Гуманитарий",
+      "stats": {
+        "hp": 25,
+        "max_hp": 25,
+        "attack": 6,
+        "accuracy": 70,
+        "dodge": 10
+      },
+      "notebook_id": "notebook_russian",
+      "meet_dialogue": "Ты осмелился явиться сюда?! Я заставлю тебя расставить все знаки препинания!",
+      "is_boss": true
+    },
+    {
+      "id": "enemy_nerd_physics",
+      "name": "Технарь",
+      "stats": {
+        "hp": 30,
+        "max_hp": 30,
+        "attack": 9,
+        "accuracy": 72,
+        "dodge": 8
+      },
+      "notebook_id": "notebook_physics",
+      "meet_dialogue": "По законам термодинамики — ты проиграешь. Это неизбежно.",
+      "is_boss": true
+    },
+    {
+      "id": "enemy_nerd_math",
+      "name": "Математик",
+      "stats": {
+        "hp": 28,
+        "max_hp": 28,
+        "attack": 8,
+        "accuracy": 80,
+        "dodge": 12
+      },
+      "notebook_id": "notebook_math",
+      "meet_dialogue": "Вероятность твоей победы стремится к нулю. Я посчитал.",
+      "is_boss": true
+    },
+    {
+      "id": "enemy_nerd_chemistry",
+      "name": "Химик",
+      "stats": {
+        "hp": 32,
+        "max_hp": 32,
+        "attack": 10,
+        "accuracy": 68,
+        "dodge": 10
+      },
+      "notebook_id": "notebook_chemistry",
+      "meet_dialogue": "Ты как нестабильный элемент — тебя следует нейтрализовать!",
+      "is_boss": true
+    },
+    {
+      "id": "enemy_nerd_biology",
+      "name": "Естественник",
+      "stats": {
+        "hp": 27,
+        "max_hp": 27,
+        "attack": 7,
+        "accuracy": 73,
+        "dodge": 15
+      },
+      "notebook_id": "notebook_biology",
+      "meet_dialogue": "Законы природы неумолимы. Выживает сильнейший — а это точно не ты.",
+      "is_boss": true
+    },
+    {
+      "id": "enemy_nerd_history",
+      "name": "Историк",
+      "stats": {
+        "hp": 35,
+        "max_hp": 35,
+        "attack": 8,
+        "accuracy": 70,
+        "dodge": 8
+      },
+      "notebook_id": "notebook_history",
+      "meet_dialogue": "История не знает пощады к невеждам. Ты будешь забыт!",
+      "is_boss": true
+    },
+    {
+      "id": "enemy_nerd_geography",
+      "name": "Географ",
+      "stats": {
+        "hp": 40,
+        "max_hp": 40,
+        "attack": 11,
+        "accuracy": 75,
+        "dodge": 10
+      },
+      "notebook_id": "notebook_geography",
+      "meet_dialogue": "Ты зашёл на мою территорию. Отсюда нет выхода — я знаю все маршруты!",
+      "is_boss": true
+    },
+    {
+      "id": "enemy_bully",
+      "name": "Хулиган",
+      "stats": {
+        "hp": 15,
+        "max_hp": 15,
+        "attack": 5,
+        "accuracy": 60,
+        "dodge": 10
+      },
+      "notebook_id": "",
+      "meet_dialogue": "Эй, ты куда идёшь? Сейчас получишь!",
+      "is_boss": false
+    },
+    {
+      "id": "enemy_prefect",
+      "name": "Дежурный старшеклассник",
+      "stats": {
+        "hp": 20,
+        "max_hp": 20,
+        "attack": 6,
+        "accuracy": 65,
+        "dodge": 12
+      },
+      "notebook_id": "",
+      "meet_dialogue": "Стоять! Покажи дневник! Нет дневника — получай!",
+      "is_boss": false
+    },
+    {
+      "id": "enemy_teacher_minion",
+      "name": "Любимчик учителя",
+      "stats": {
+        "hp": 18,
+        "max_hp": 18,
+        "attack": 7,
+        "accuracy": 70,
+        "dodge": 8
+      },
+      "notebook_id": "",
+      "meet_dialogue": "Я всё расскажу учителю! А пока — получай!",
+      "is_boss": false
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "traps": [
+    {
+      "id": "trap_wet_floor",
+      "name": "Мокрый пол",
+      "description": "Уборщица только что помыла пол. Предупреждающий знак стоит посреди коридора.",
+      "is_triggered": false,
+      "options": [
+        {
+          "description": "Осторожно обойти по стенке",
+          "success_chance": 80,
+          "success_damage": 0,
+          "fail_damage": 5
+        },
+        {
+          "description": "Перепрыгнуть лужу",
+          "success_chance": 50,
+          "success_damage": 0,
+          "fail_damage": 8
+        },
+        {
+          "description": "Пройти напролом",
+          "success_chance": 20,
+          "success_damage": 0,
+          "fail_damage": 12
+        }
+      ]
+    },
+    {
+      "id": "trap_broken_stairs",
+      "name": "Сломанная ступенька",
+      "description": "Одна из ступенек лестницы явно шатается. Наступишь — будет больно.",
+      "is_triggered": false,
+      "options": [
+        {
+          "description": "Перешагнуть через сломанную ступеньку",
+          "success_chance": 75,
+          "success_damage": 0,
+          "fail_damage": 6
+        },
+        {
+          "description": "Держаться за перила и идти медленно",
+          "success_chance": 90,
+          "success_damage": 0,
+          "fail_damage": 3
+        },
+        {
+          "description": "Бежать, не глядя под ноги",
+          "success_chance": 30,
+          "success_damage": 0,
+          "fail_damage": 15
+        }
+      ]
+    },
+    {
+      "id": "trap_angry_teacher",
+      "name": "Учитель в коридоре",
+      "description": "В конце коридора стоит учитель и подозрительно смотрит в твою сторону.",
+      "is_triggered": false,
+      "options": [
+        {
+          "description": "Спрятаться за шкафом",
+          "success_chance": 70,
+          "success_damage": 0,
+          "fail_damage": 7
+        },
+        {
+          "description": "Притвориться, что идёшь на урок",
+          "success_chance": 55,
+          "success_damage": 0,
+          "fail_damage": 5
+        },
+        {
+          "description": "Развернуться и убежать",
+          "success_chance": 60,
+          "success_damage": 0,
+          "fail_damage": 10
+        }
+      ]
+    },
+    {
+      "id": "trap_locker_fall",
+      "name": "Падающий шкафчик",
+      "description": "Один из шкафчиков в раздевалке опасно наклонился прямо на пути.",
+      "is_triggered": false,
+      "options": [
+        {
+          "description": "Быстро отскочить в сторону",
+          "success_chance": 65,
+          "success_damage": 0,
+          "fail_damage": 10
+        },
+        {
+          "description": "Попытаться удержать шкафчик",
+          "success_chance": 40,
+          "success_damage": 0,
+          "fail_damage": 14
+        },
+        {
+          "description": "Нырнуть под шкафчик",
+          "success_chance": 55,
+          "success_damage": 0,
+          "fail_damage": 8
+        }
+      ]
+    },
+    {
+      "id": "trap_fire_alarm",
+      "name": "Пожарная тревога",
+      "description": "Кто-то нажал кнопку пожарной тревоги. Толпа учеников несётся прямо на тебя.",
+      "is_triggered": false,
+      "options": [
+        {
+          "description": "Прижаться к стене и пропустить толпу",
+          "success_chance": 75,
+          "success_damage": 0,
+          "fail_damage": 8
+        },
+        {
+          "description": "Бежать вместе со всеми",
+          "success_chance": 60,
+          "success_damage": 0,
+          "fail_damage": 6
+        },
+        {
+          "description": "Идти против толпы к цели",
+          "success_chance": 25,
+          "success_damage": 0,
+          "fail_damage": 18
+        }
+      ]
+    }
+  ]
+}

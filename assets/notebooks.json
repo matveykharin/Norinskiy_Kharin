@@ -1,0 +1,53 @@
+{
+  "notebooks": [
+    {
+      "id": "notebook_russian",
+      "name": "Тетрадь по русскому языку",
+      "subject": "Русский язык",
+      "base_damage": 7,
+      "combo_effect_description": "Словесный удар — оглушает врага на один ход"
+    },
+    {
+      "id": "notebook_physics",
+      "name": "Тетрадь по физике",
+      "subject": "Физика",
+      "base_damage": 10,
+      "combo_effect_description": "Закон сохранения — удваивает урон следующей атаки"
+    },
+    {
+      "id": "notebook_math",
+      "name": "Тетрадь по математике",
+      "subject": "Математика",
+      "base_damage": 9,
+      "combo_effect_description": "Точный расчёт — гарантированное попадание без шанса промаха"
+    },
+    {
+      "id": "notebook_chemistry",
+      "name": "Тетрадь по химии",
+      "subject": "Химия",
+      "base_damage": 11,
+      "combo_effect_description": "Химическая реакция — снижает атаку врага на 3 на два хода"
+    },
+    {
+      "id": "notebook_biology",
+      "name": "Тетрадь по биологии",
+      "subject": "Биология",
+      "base_damage": 8,
+      "combo_effect_description": "Регенерация — восстанавливает 5 HP игроку"
+    },
+    {
+      "id": "notebook_history",
+      "name": "Тетрадь по истории",
+      "subject": "История",
+      "base_damage": 9,
+      "combo_effect_description": "Древняя тактика — следующие 2 атаки врага промахиваются"
+    },
+    {
+      "id": "notebook_geography",
+      "name": "Тетрадь по географии",
+      "subject": "География",
+      "base_damage": 8,
+      "combo_effect_description": "Ориентирование — повышает уклонение игрока на 20 на 3 хода"
+    }
+  ]
+}

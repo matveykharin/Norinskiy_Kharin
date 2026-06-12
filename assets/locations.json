@@ -1,0 +1,489 @@
+{
+  "locations": [
+    {
+      "id": "canteen",
+      "name": "Школьная столовая",
+      "description": "Большой зал с длинными столами. Пахнет борщом и компотом.",
+      "full_description": "Школьная столовая — место, где всё и началось. Ряды столов, запах борща, гул голосов. Под одним из столов ты нашёл ту самую фреску из жвачки с семью Умниками. Отсюда можно пройти на первый этаж.",
+      "exits": {
+        "north": "floor1_main_corridor"
+      },
+      "objects": [
+        {
+          "id": "npc_canteen_lady",
+          "type": "npc",
+          "npc": {
+            "id": "npc_canteen_lady",
+            "name": "Повариха Людмила Ивановна",
+            "dialogue_id": "dialogue_canteen_lady_1"
+          }
+        },
+        {
+          "id": "chest_canteen",
+          "type": "chest",
+          "chest": {
+            "id": "chest_canteen",
+            "item_ids": ["potion_small", "potion_small"],
+            "is_opened": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "floor1_main_corridor",
+      "name": "Первый этаж. Главный коридор",
+      "description": "Длинный коридор с рядами шкафчиков. На стенах — стенгазеты и расписание уроков.",
+      "full_description": "Главный коридор первого этажа. Шкафчики вдоль стен, доска объявлений с выцветшим расписанием. Пол недавно вымыт — знак уборщицы стоит в углу. На север — крыло с классами, на восток — раздевалка и живой уголок, на юг — обратно в столовую. Лестница наверх в конце коридора.",
+      "exits": {
+        "south": "canteen",
+        "north": "floor1_east_wing",
+        "east": "floor1_locker_room",
+        "up": "floor2_main_corridor"
+      },
+      "objects": [
+        {
+          "id": "npc_cleaner_1",
+          "type": "npc",
+          "npc": {
+            "id": "npc_cleaner_1",
+            "name": "Уборщица Зинаида Павловна",
+            "dialogue_id": "dialogue_cleaner_1"
+          }
+        },
+        {
+          "id": "trap_wet_floor_1",
+          "type": "trap",
+          "trap": {
+            "id": "trap_wet_floor",
+            "name": "Мокрый пол",
+            "description": "Уборщица только что помыла пол. Предупреждающий знак стоит посреди коридора.",
+            "is_triggered": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "floor1_locker_room",
+      "name": "Раздевалка",
+      "description": "Небольшая раздевалка у спортивного зала. Шкафчики, скамейки, запах кроссовок.",
+      "full_description": "Раздевалка рядом со спортзалом. Ряды шкафчиков, деревянные скамейки. Один из шкафчиков опасно накренился. На запад — обратно в главный коридор.",
+      "exits": {
+        "west": "floor1_main_corridor"
+      },
+      "objects": [
+        {
+          "id": "trap_locker_fall_1",
+          "type": "trap",
+          "trap": {
+            "id": "trap_locker_fall",
+            "name": "Падающий шкафчик",
+            "description": "Один из шкафчиков в раздевалке опасно наклонился прямо на пути.",
+            "is_triggered": false
+          }
+        },
+        {
+          "id": "chest_locker_room",
+          "type": "chest",
+          "chest": {
+            "id": "chest_locker_room",
+            "item_ids": ["consumable_dodge", "potion_small"],
+            "is_opened": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "floor1_east_wing",
+      "name": "Первый этаж. Восточное крыло",
+      "description": "Тихое крыло с кабинетами биологии и живым уголком. Слышно чириканье птиц.",
+      "full_description": "Восточное крыло первого этажа. Здесь тихо — только птицы в живом уголке чирикают. Дверь в кабинет биологии приоткрыта. Кажется, там кто-то есть.",
+      "exits": {
+        "south": "floor1_main_corridor",
+        "east": "biology_room"
+      },
+      "objects": [
+        {
+          "id": "enemy_prefect_1",
+          "type": "enemy",
+          "enemy": {
+            "id": "enemy_prefect",
+            "name": "Дежурный старшеклассник",
+            "stats": {
+              "hp": 20,
+              "max_hp": 20,
+              "attack": 6,
+              "accuracy": 65,
+              "dodge": 12
+            },
+            "notebook_id": "",
+            "meet_dialogue": "Стоять! Покажи дневник! Нет дневника — получай!",
+            "is_boss": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "biology_room",
+      "name": "Кабинет биологии",
+      "description": "Кабинет с плакатами скелетов и внутренних органов. В углу — клетки с хомяками.",
+      "full_description": "Кабинет биологии. На стенах — плакаты со строением человека и животных. В углу живой уголок: хомяки, черепаха, аквариум с рыбками. За учительским столом сидит Естественник и что-то бормочет себе под нос.",
+      "exits": {
+        "west": "floor1_east_wing"
+      },
+      "objects": [
+        {
+          "id": "boss_biology",
+          "type": "enemy",
+          "enemy": {
+            "id": "enemy_nerd_biology",
+            "name": "Естественник",
+            "stats": {
+              "hp": 27,
+              "max_hp": 27,
+              "attack": 7,
+              "accuracy": 73,
+              "dodge": 15
+            },
+            "notebook_id": "notebook_biology",
+            "meet_dialogue": "Законы природы неумолимы. Выживает сильнейший — а это точно не ты.",
+            "is_boss": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "floor2_main_corridor",
+      "name": "Второй этаж. Главный коридор",
+      "description": "Коридор второго этажа. Здесь тише, чем внизу. Кабинеты точных наук.",
+      "full_description": "Второй этаж. Вдоль стен — кабинеты математики и физики. На доске объявлений — листок с расписанием олимпиад. Слышно, как за одной из дверей что-то гудит и потрескивает. Охранник дремлет на стуле у лестницы.",
+      "exits": {
+        "down": "floor1_main_corridor",
+        "north": "math_room",
+        "east": "workshop",
+        "up": "floor3_main_corridor"
+      },
+      "objects": [
+        {
+          "id": "npc_guard_1",
+          "type": "npc",
+          "npc": {
+            "id": "npc_guard_1",
+            "name": "Охранник Василий",
+            "dialogue_id": "dialogue_guard_1"
+          }
+        },
+        {
+          "id": "trap_fire_alarm_1",
+          "type": "trap",
+          "trap": {
+            "id": "trap_fire_alarm",
+            "name": "Пожарная тревога",
+            "description": "Кто-то нажал кнопку пожарной тревоги. Толпа учеников несётся прямо на тебя.",
+            "is_triggered": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "math_room",
+      "name": "Кабинет математики №214",
+      "description": "Кабинет весь исписан формулами. На доске — незаконченное доказательство теоремы.",
+      "full_description": "Кабинет 214. Доска занята от края до края — формулы, графики, уравнения. За партой в первом ряду сидит Математик и скрипит мелом, что-то доказывая самому себе. Он явно не рад гостям.",
+      "exits": {
+        "south": "floor2_main_corridor"
+      },
+      "objects": [
+        {
+          "id": "boss_math",
+          "type": "enemy",
+          "enemy": {
+            "id": "enemy_nerd_math",
+            "name": "Математик",
+            "stats": {
+              "hp": 28,
+              "max_hp": 28,
+              "attack": 8,
+              "accuracy": 80,
+              "dodge": 12
+            },
+            "notebook_id": "notebook_math",
+            "meet_dialogue": "Вероятность твоей победы стремится к нулю. Я посчитал.",
+            "is_boss": true
+          }
+        },
+        {
+          "id": "chest_math_room",
+          "type": "chest",
+          "chest": {
+            "id": "chest_math_room",
+            "item_ids": ["potion_medium", "consumable_focus"],
+            "is_opened": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "workshop",
+      "name": "Мастерская (кабинет труда)",
+      "description": "Запах опилок и машинного масла. Верстаки, инструменты, гул какого-то механизма.",
+      "full_description": "Школьная мастерская. На верстаках разложены инструменты, в углу — токарный станок. Посреди комнаты Технарь собирает что-то из металла и проводов. При виде тебя он откладывает отвёртку.",
+      "exits": {
+        "west": "floor2_main_corridor"
+      },
+      "objects": [
+        {
+          "id": "boss_physics",
+          "type": "enemy",
+          "enemy": {
+            "id": "enemy_nerd_physics",
+            "name": "Технарь",
+            "stats": {
+              "hp": 30,
+              "max_hp": 30,
+              "attack": 9,
+              "accuracy": 72,
+              "dodge": 8
+            },
+            "notebook_id": "notebook_physics",
+            "meet_dialogue": "По законам термодинамики — ты проиграешь. Это неизбежно.",
+            "is_boss": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "floor3_main_corridor",
+      "name": "Третий этаж. Главный коридор",
+      "description": "Третий этаж — территория гуманитариев и химиков. Пахнет реактивами.",
+      "full_description": "Третий этаж. Запах реактивов из лаборатории смешивается с запахом старых книг из библиотеки. В конце коридора — кабинет русского языка. На скамейке у окна сидит уборщица.",
+      "exits": {
+        "down": "floor2_main_corridor",
+        "north": "library",
+        "east": "chemistry_lab",
+        "up": "floor4_main_corridor"
+      },
+      "objects": [
+        {
+          "id": "npc_cleaner_2",
+          "type": "npc",
+          "npc": {
+            "id": "npc_cleaner_2",
+            "name": "Уборщица Зинаида Павловна",
+            "dialogue_id": "dialogue_cleaner_2"
+          }
+        },
+        {
+          "id": "enemy_bully_1",
+          "type": "enemy",
+          "enemy": {
+            "id": "enemy_bully",
+            "name": "Хулиган",
+            "stats": {
+              "hp": 15,
+              "max_hp": 15,
+              "attack": 5,
+              "accuracy": 60,
+              "dodge": 10
+            },
+            "notebook_id": "",
+            "meet_dialogue": "Эй, ты куда идёшь? Сейчас получишь!",
+            "is_boss": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "library",
+      "name": "Школьная библиотека",
+      "description": "Высокие полки с книгами, тишина. Пахнет старой бумагой.",
+      "full_description": "Библиотека. Стеллажи под потолок, узкие проходы между рядами. В читальном зале — только Гуманитарий. Перед ним стопка томов и красная ручка, которой он правит чужие тексты.",
+      "exits": {
+        "south": "floor3_main_corridor"
+      },
+      "objects": [
+        {
+          "id": "boss_russian",
+          "type": "enemy",
+          "enemy": {
+            "id": "enemy_nerd_russian",
+            "name": "Гуманитарий",
+            "stats": {
+              "hp": 25,
+              "max_hp": 25,
+              "attack": 6,
+              "accuracy": 70,
+              "dodge": 10
+            },
+            "notebook_id": "notebook_russian",
+            "meet_dialogue": "Ты осмелился явиться сюда?! Я заставлю тебя расставить все знаки препинания!",
+            "is_boss": true
+          }
+        },
+        {
+          "id": "chest_library",
+          "type": "chest",
+          "chest": {
+            "id": "chest_library",
+            "item_ids": ["potion_medium"],
+            "is_opened": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "chemistry_lab",
+      "name": "Химическая лаборатория",
+      "description": "Стеклянные колбы, горелки, таблица Менделеева на всю стену. Воздух щиплет глаза.",
+      "full_description": "Химическая лаборатория. На столах — штативы с колбами, в которых булькает что-то разноцветное. Таблица Менделеева занимает всю стену. Химик стоит у вытяжного шкафа и при виде тебя медленно оборачивается.",
+      "exits": {
+        "west": "floor3_main_corridor"
+      },
+      "objects": [
+        {
+          "id": "boss_chemistry",
+          "type": "enemy",
+          "enemy": {
+            "id": "enemy_nerd_chemistry",
+            "name": "Химик",
+            "stats": {
+              "hp": 32,
+              "max_hp": 32,
+              "attack": 10,
+              "accuracy": 68,
+              "dodge": 10
+            },
+            "notebook_id": "notebook_chemistry",
+            "meet_dialogue": "Ты как нестабильный элемент — тебя следует нейтрализовать!",
+            "is_boss": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "floor4_main_corridor",
+      "name": "Четвёртый этаж. Главный коридор",
+      "description": "Верхний этаж школы. Здесь почти никого нет. Два кабинета в конце коридора.",
+      "full_description": "Четвёртый этаж — самый тихий. Кабинет истории и кабинет географии расположены в самом конце. Откуда-то доносится запах старых карт и пыльных хроник. Охранник дремлет у лестницы.",
+      "exits": {
+        "down": "floor3_main_corridor",
+        "north": "history_room",
+        "east": "geography_room"
+      },
+      "objects": [
+        {
+          "id": "npc_guard_2",
+          "type": "npc",
+          "npc": {
+            "id": "npc_guard_2",
+            "name": "Охранник Василий",
+            "dialogue_id": "dialogue_guard_2"
+          }
+        },
+        {
+          "id": "npc_cleaner_3",
+          "type": "npc",
+          "npc": {
+            "id": "npc_cleaner_3",
+            "name": "Уборщица Зинаида Павловна",
+            "dialogue_id": "dialogue_cleaner_3"
+          }
+        },
+        {
+          "id": "trap_broken_stairs_1",
+          "type": "trap",
+          "trap": {
+            "id": "trap_broken_stairs",
+            "name": "Сломанная ступенька",
+            "description": "Одна из ступенек лестницы явно шатается. Наступишь — будет больно.",
+            "is_triggered": false
+          }
+        },
+        {
+          "id": "chest_top_floor",
+          "type": "chest",
+          "chest": {
+            "id": "chest_top_floor",
+            "item_ids": ["potion_large", "consumable_focus"],
+            "is_opened": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "history_room",
+      "name": "Кабинет истории",
+      "description": "Карты древних империй, портреты полководцев, запах пыли и времени.",
+      "full_description": "Кабинет истории. Стены увешаны картами разных эпох — от древнего мира до современности. Портреты исторических деятелей смотрят на тебя со всех сторон. Историк стоит у доски и чертит схему какой-то битвы.",
+      "exits": {
+        "south": "floor4_main_corridor"
+      },
+      "objects": [
+        {
+          "id": "boss_history",
+          "type": "enemy",
+          "enemy": {
+            "id": "enemy_nerd_history",
+            "name": "Историк",
+            "stats": {
+              "hp": 35,
+              "max_hp": 35,
+              "attack": 8,
+              "accuracy": 70,
+              "dodge": 8
+            },
+            "notebook_id": "notebook_history",
+            "meet_dialogue": "История не знает пощады к невеждам. Ты будешь забыт!",
+            "is_boss": true
+          }
+        },
+        {
+          "id": "enemy_teacher_minion_1",
+          "type": "enemy",
+          "enemy": {
+            "id": "enemy_teacher_minion",
+            "name": "Любимчик учителя",
+            "stats": {
+              "hp": 18,
+              "max_hp": 18,
+              "attack": 7,
+              "accuracy": 70,
+              "dodge": 8
+            },
+            "notebook_id": "",
+            "meet_dialogue": "Я всё расскажу учителю! А пока — получай!",
+            "is_boss": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "geography_room",
+      "name": "Кабинет географии",
+      "description": "Огромный глобус, физические карты мира, компасы и теодолиты на полках.",
+      "full_description": "Кабинет географии — конечная точка маршрута. Огромный глобус посреди комнаты, карты на всех стенах. Географ стоит у окна и смотрит вдаль. При твоём появлении он медленно поворачивается.",
+      "exits": {
+        "west": "floor4_main_corridor"
+      },
+      "objects": [
+        {
+          "id": "boss_geography",
+          "type": "enemy",
+          "enemy": {
+            "id": "enemy_nerd_geography",
+            "name": "Географ",
+            "stats": {
+              "hp": 40,
+              "max_hp": 40,
+              "attack": 11,
+              "accuracy": 75,
+              "dodge": 10
+            },
+            "notebook_id": "notebook_geography",
+            "meet_dialogue": "Ты зашёл на мою территорию. Отсюда нет выхода — я знаю все маршруты!",
+            "is_boss": true
+          }
+        }
+      ]
+    }
+  ]
+}

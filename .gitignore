@@ -1,0 +1,21 @@
+# Папка сборки CMake
+build/
+
+# macOS системные файлы
+.DS_Store
+.AppleDouble
+
+# VS Code — личные настройки редактора (не код)
+.vscode/
+
+# Скомпилированные бинарники
+*.o
+*.a
+*.out
+evil_nerds
+
+# CMake служебные файлы если вдруг окажутся вне build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile

@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "id": "potion_small",
+      "name": "Маленькое зелье здоровья",
+      "description": "Мятный леденец из школьного буфета. Восстанавливает 8 HP.",
+      "type": "health_potion",
+      "value": 8
+    },
+    {
+      "id": "potion_medium",
+      "name": "Среднее зелье здоровья",
+      "description": "Стакан компота из столовой. Восстанавливает 15 HP.",
+      "type": "health_potion",
+      "value": 15
+    },
+    {
+      "id": "potion_large",
+      "name": "Большое зелье здоровья",
+      "description": "Термос с домашним борщом. Восстанавливает 25 HP.",
+      "type": "health_potion",
+      "value": 25
+    },
+    {
+      "id": "consumable_focus",
+      "name": "Шпаргалка",
+      "description": "Мелко исписанная бумажка. Повышает точность на 15 на один бой.",
+      "type": "consumable",
+      "value": 15
+    },
+    {
+      "id": "consumable_dodge",
+      "name": "Кроссовки на липучках",
+      "description": "Найдены в раздевалке. Повышают уклонение на 10 на один бой.",
+      "type": "consumable",
+      "value": 10
+    }
+  ]
+}

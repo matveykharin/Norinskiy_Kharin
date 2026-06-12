@@ -1,0 +1,12 @@
+{
+  "name": "Рэн",
+  "stats": {
+    "hp": 30,
+    "max_hp": 30,
+    "attack": 8,
+    "accuracy": 75,
+    "dodge": 15
+  },
+  "notebook_ids": [],
+  "inventory": []
+}
